@@ -11,8 +11,8 @@ npm i @flemist/copy-glob-flat
 ```
 # Usage CLI
 ```sh
-cp-flat <DEST_DIR> <GLOBBY_PATTERN_1> <GLOBBY_PATTERN_2> ...
-cp-flat tmp/destDir src/**/*.txt !**/ignore.txt
+cp-flat <SOURCE_GLOB1> <SOURCE_GLOB2> ... <DEST_DIR>
+cp-flat src/**/*.txt !**/ignore.txt tmp/destDir
 ```
 # Usage module
 ```ts

@@ -1,10 +1,10 @@
 import {copyGlobFlat} from './copyGlobFlat'
 
-const [destDir, ...globs] = process.argv.slice(2)
+const paths = process.argv.slice(2)
 
 copyGlobFlat({
-  destDir,
-  globs,
+  destDir: paths[paths.length - 1],
+  globs  : paths.slice(0, paths.length - 1),
 })
   .catch(err => {
     console.error(err)

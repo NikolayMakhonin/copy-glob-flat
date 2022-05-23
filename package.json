@@ -1,11 +1,11 @@
 {
   "name": "@flemist/copy-glob-flat",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Copy files to single directory with auto rename duplicates",
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "cp-flat": "./dist/cli.cjs"
+    "cp-flat": "./dist/run.js"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
     "prepublishOnly": "yarn build && yarn run test:mocha:ci",
     "lint": "eslint \"./src/**/*.{ts,js,cjs,mjs}\"",
     "lint:fix": "eslint --fix \"./src/**/*.{ts,js,cjs,mjs}\"",
-    "build:js": "rollup -c && cpy \"**/assets/**\" \"../dist/\" --parents --cwd=src",
+    "build:js": "rollup -c && cpy \"**/assets/**\" \"**/*.js\" \"../dist/\" --parents --cwd=src",
     "build:types": "tsc --outDir dist --declaration",
     "build": "rimraf dist && yarn run build:js && yarn run build:types",
     "coverage:check": "nyc check-coverage --report-dir tmp/coverage/all/lcov --lines 50 --functions 50 --branches 50 --statements 50",
