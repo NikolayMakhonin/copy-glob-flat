@@ -9,7 +9,12 @@ Copy files to single directory with auto rename duplicates
 ```
 npm i @flemist/copy-glob-flat
 ```
-# Usage
+# Usage CLI
+```sh
+cp-flat <DEST_DIR> <GLOBBY_PATTERN_1> <GLOBBY_PATTERN_2> ...
+cp-flat tmp/destDir src/**/*.txt !**/ignore.txt
+```
+# Usage module
 ```ts
 import {copyGlobFlat} from '@flemist/copy-glob-flat'
 
