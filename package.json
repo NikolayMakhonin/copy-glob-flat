@@ -1,11 +1,11 @@
 {
   "name": "@flemist/copy-glob-flat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Copy files to single directory with auto rename duplicates",
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "bin": {
-    "cp-flat": "./dist/cli.js"
+    "cp-flat": "./dist/cli.cjs"
   },
   "repository": {
     "type": "git",
